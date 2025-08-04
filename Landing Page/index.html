@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurante Sabor Real</title>
+
+  <!-- Estilos externos: Swiper para carrusel, Lightbox para galería -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" />
+
+  <!-- Tipografía de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: #fff;
+      color: #333;
+    }
+
+    /* Encabezado fijo con navegación */
+    header.sticky-header {
+      position: sticky;
+      top: 0;
+      background-color: #111;
+      color: white;
+      padding: 15px 20px;
+      z-index: 1000;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Carrusel de imágenes */
+    .swiper {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .swiper-slide {
+      height: 100%;
+      position: relative;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Texto sobrepuesto al banner */
+    .banner-texto-debajo {
+      text-align: center;
+      background-color: #e74c3c;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* Galería con Lightbox */
+    .galeria {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .galeria img {
+      width: 400px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Video responsivo */
+    iframe {
+      width: 80%;
+      max-width: 560px;
+      height: 315px;
+    }
+
+    /* Formulario de contacto */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #c0392b;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Botón flotante de regreso al inicio */
+    .btn-flotante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #e74c3c;
+      color: white;
+      font-size: 24px;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado con menú de navegación -->
+  <header class="sticky-header">
+    <nav>
+      <h1>Restaurante Sabor Real</h1>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Carrusel con bienvenida -->
+  <section id="inicio">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="Imagenes/comida1.jpg" alt="Plato 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="Imagenes/comida2.jpg" alt="Plato 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="Imagenes/cocteles.jpg" alt="Cocteles">
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-texto-debajo">
+      <h2>Bienvenido a Restaurante Sabor Real</h2>
+      <p>Comida con sabor casero y experiencias únicas</p>
+    </div>
+  </section>
+
+  <!-- Galería de imágenes -->
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <!-- CORRECCIÓN: Atributo data-lightbox restaurado -->
+      <a href="Imagenes/comida3.png" data-lightbox="galeria">
+        <img src="Imagenes/comida3.png" alt="Plato especial 1">
+      </a>
+      <a href="Imagenes/comida4.png" data-lightbox="galeria">
+        <img src="Imagenes/comida4.png" alt="Plato especial 2">
+      </a>
+    </div>
+  </section>
+
+  <!-- Video institucional -->
+  <section id="video">
+    <h2>Conócenos</h2>
+    <iframe src="https://www.youtube.com/embed/eVVfsLg--aA" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Nombre completo" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Restaurante Sabor Real. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón flotante para volver al inicio -->
+  <a href="#inicio" class="btn-flotante" title="Ir arriba">↑</a>
+
+  <!-- Scripts para carrusel y galería -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Inicialización de Swiper (carrusel automático)
+      new Swiper('.mySwiper', {
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false
+        }
+      });
+
+      // Mensaje de confirmación al enviar el formulario
+      document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Gracias por tu mensaje. Te responderemos pronto.");
+        this.reset();
+      });
+    });
+  </script>
+</body>
+</html>
