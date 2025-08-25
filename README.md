@@ -83,3 +83,6 @@ La Landing Page está diseñada para adaptarse a distintos dispositivos:
 ## ✨ Autor
 
 Proyecto académico desarrollado por *Santiago Restrepo* y *Josue Pino*
+
+## Presentacion canva 
+https://www.canva.com/design/DAGw8mzmF4w/vDUQedlsUaRolp0wA3g2CA/edit?utm_content=DAGw8mzmF4w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
